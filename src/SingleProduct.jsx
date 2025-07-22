@@ -9,6 +9,7 @@ import { Container } from "./styles/Container";
 import FormatPrice from "./Helpers/FormatPrice";
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
+import Star from "./component/Star";
 const SingleProduct = () => {
   const api = "https://686a65bc2af1d945cea402cf.mockapi.io/products";
 
@@ -51,8 +52,9 @@ const SingleProduct = () => {
           {/* product dAta  */}
           <div className="product-data">
             <h2>{name}</h2>
-            <p>{stars}</p>
-            <p>{reviews} reviews</p>
+            <Star stars={stars} reviews={reviews} />
+            {/* <p>{stars}</p>
+            <p>{reviews} reviews</p> */}
             <p className="product-data-price">
               MRP:
               <del>
@@ -76,7 +78,7 @@ const SingleProduct = () => {
 
               <div className="product-warranty-data">
                 <TbTruckDelivery className="warranty-icon" />
-                <p>Thapa Delivered </p>
+                <p>Vaishali Delivered </p>
               </div>
 
               <div className="product-warranty-data">
